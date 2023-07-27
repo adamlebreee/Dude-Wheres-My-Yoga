@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "DudeWheresMyYoga",
+    "slug": "dude-wheres-my-yoga",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff",
+      "android": {
+        "config": {
+          "googleMaps": {
+            "apiKey": "AIzaSyCMxwEq7aKnULlzl9rKCDUcDHypoRbpgtU"
+          }
+        }
+      }
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "923120c0-0c7d-4c03-85b3-49660587253d"
+      }
+    },
+    "owner": "adamlebreee"
+  }
+}
