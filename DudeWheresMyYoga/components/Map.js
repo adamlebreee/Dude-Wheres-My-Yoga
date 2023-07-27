@@ -1,13 +1,13 @@
 import React from "react";
-import MapView from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 import { Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get('window');
 
-const Map = () => {
+const Map = ({ studios, setSelectedStudio }) => {
     return (
         <MapView
-            style={{ width, height }}
+            style={{ flex: 1 }}
             initialRegion={{
                 latitude: 52.5200,
                 longitude: 13.4050,
@@ -15,7 +15,20 @@ const Map = () => {
                 longitudeDelta: 0.0421,
             }}
             showsUserLocation={true}
-        />
+        >
+
+            {studios.map((studio, index) => (
+                <Marker
+                    key={index}
+                    coordinate={{ latitude: studio.latitude, longitude: studio.longitude }}
+                    title={studio.name}
+                    description={studio.address}
+                    onPress={() => setSelectedStudio(studio)}
+                />
+
+            ))}
+        </MapView>
+
     );
 }
 
