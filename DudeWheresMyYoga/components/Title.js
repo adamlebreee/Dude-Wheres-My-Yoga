@@ -1,18 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        textAlign: 'center',
+    logo: {
+        width: 200,
+        height: 200,
+        resizeMode: 'contain',
     },
 });
 
 const Title = () => {
     return (
-        <View>
-            <Text style={styles.title}>Dude, Where's My Yoga?</Text>
+            <View style={{ alignItems: 'center'}}>
+                <Image
+                    style={styles.logo}
+                source={require('../assets/logo.png')}
+            />
         </View>
     );
 };

@@ -31,7 +31,7 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>
       <Title />
-      <StyleDropdown setSelectedStyle={setSelectedStyle} />
+      <StyleDropdown setSelectedStyle={setSelectedStyle} selectedStyle={selectedStyle} />
       {selectedStyle && <StyleTooltip selectedStyle={selectedStyle} />}
       <View style={{ flex: 0.7 }}>
         <Map setSelectedStudio={setSelectedStudio} studios={studios} />

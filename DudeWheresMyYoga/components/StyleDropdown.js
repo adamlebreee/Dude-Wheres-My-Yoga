@@ -2,12 +2,13 @@ import React from 'react';
 import { View } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-const styles = ['Vinyasa', 'Hatha', 'Aerial', 'Acro', 'Bikram', 'Jivamukhti', 'Beer'];
+const styles = ['Vinyasa', 'Hatha', 'Aerial', 'Bikram', 'Jivamukti', 'Beer'];
 
-const StyleDropdown = ({ setSelectedStyle }) => {
+const StyleDropdown = ({ selectedStyle, setSelectedStyle }) => {
     return (
         <View>
             <Picker
+                selectedValue={selectedStyle}
                 onValueChange={(itemValue) => setSelectedStyle(itemValue)}
             >
                 <Picker.Item label="Select a Style" value={null} />

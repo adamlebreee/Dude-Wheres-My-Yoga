@@ -10,7 +10,8 @@ mongoose.connect('mongodb://localhost:27017/Yoga', {
     console.error('Error connecting to DB', error);
 });
 
-const studio1 = new Studio({
+const studios = [
+    { 
     name: "Yoga Hub",
     address: "Greifswalder Str. 8d, 10405 Berlin",
     latitude: 52.53027676188006,
@@ -18,33 +19,299 @@ const studio1 = new Studio({
     googlePlaceId: "ChIJhzwmrBpOqEcRKqYpRHPTlgw",
     styles_offered: ["Hatha", "Vinyasa"],
     website: "https://www.yogahubberlin.com/",
-});
+},
+{
+    name: "Hot Yoga Berlin - Yoga & More",
+    address: "Knobelsdorffstraße 34, 14059 Berlin, Germany",
+    latitude: 52.5134146,
+    longitude: 13.2917112,
+    googlePlaceId: "ChIJ98uMqedQqEcRIFb7akso1F0",
+    styles_offered: ["Bikram", "Hatha"],
+    website: "https://yoga-more.de/",
+    },
+    {
+    name: "SUN YOGA Kreuzberg",
+    address: "Mehringdamm 33, 10961 Berlin, Germany",
+    latitude: 52.4933847,
+    longitude: 13.3887912,
+    googlePlaceId: "ChIJSUa_AilQqEcRG7ShkkKF65M",
+    styles_offered: ["Bikram"],
+        website: "https://www.sunyoga.de/",
+    },
+    {
+        name: "Hale.Now Studio Kreuzberg",
+        address: "Heinrich-Heine-Platz 10, 10179 Berlin, Germany",
+        latitude: 52.5066054,
+        longitude: 13.4163132,
+        googlePlaceId: "ChIJuQ1Vz31PqEcRBG7Vd93c5Z0",
+        styles_offered: ["Aerial", "Vinyasa", "Hatha"],
+        website: "https://www.hale-now.com/",
+    },
+    {
+        name: "Hale.Now Studio Mitte",
+        address: "Linienstraße 156, 10115 Berlin, Germany",
+        latitude: 52.5276327,
+        longitude: 13.3941875,
+        googlePlaceId: "ChIJT53Kq55RqEcRw1wbdHUQHKQ",
+        styles_offered: ["Aerial", "Vinyasa", "Hatha"],
+        website: "https://www.hale-now.com/",
+    },
+    {
+        name: "Aerial Pilates Berlin",
+        address: "Am Märchenbrunnen 11, 10407 Berlin, Germany",
+        latitude: 52.5293043,
+        longitude: 13.4263694,
+        googlePlaceId: "ChIJFzheo0ZPqEcRM20qkHVLRGc",
+        styles_offered: ["Aerial"],
+        website: "https://www.aerial-pilates.me/",
+    },
+    {
+        name: "Fl'air Studios - Aerial Arts and Fitness",
+        address: "Holzmarktstraße 15-18 S-Bahnbogen 52, 10179 Berlin, Germany",
+        latitude: 52.5134250,
+        longitude: 13.4223536,
+        googlePlaceId: "ChIJ02X4dztOqEcRGUVRWJrEoNY",
+        styles_offered: ["Aerial"],
+        website: "https://flair-studios.de/",
+    },
+    {
+        name: "Die Aeronauten - Aerial & Akrobatik Yoga Kreuzberg",
+        address: "Glogauer Str. 6, 10999 Berlin, Germany",
+        latitude: 52.4941852,
+        longitude: 13.4371202,
+        googlePlaceId: "ChIJM7urZvVPqEcRuZwv2tT3jaU",
+        styles_offered: ["Aerial"],
+        website: "https://www.aeronauten.berlin/",
+    },
+    {
+        name: "Peace Yoga Berlin - Jivamukti Yoga School",
+        address: "Eisenbahnstraße 5, 10997 Berlin, Germany",
+        latitude: 52.5018717,
+        longitude: 13.4323989,
+        googlePlaceId: "ChIJKaLpnNtPqEcRIwBRHtZrWWQ",
+        styles_offered: ["Jivamukti", "Vinyasa"],
+        website: "https://jivamuktiyoga.com/locations/peace-yoga-berlin/",
+    },
+    {
+        name: "EVERY DAMN DAY YOGA",
+        address: "Revaler Str. 22, 10245 Berlin, Germany",
+        latitude: 52.5057765,
+        longitude: 13.4619054,
+        googlePlaceId: "ChIJDV5glT9PqEcR4-iXW-toEjI",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://www.everydamndayyoga.de/",
+    },
+    {
+        name: "Three Boons Yoga Berlin-Mitte (Jivamukti Berlin GmbH)",
+        address: "Brunnenstraße 29/3. Hinterhof, 10119 Berlin, Germany",
+        latitude: 52.5345420,
+        longitude: 13.3992758,
+        googlePlaceId: "PLACEHOLDER",
+        styles_offered: ["Jivamukti"],
+        website: "https://www.threeboonsyoga.de",
+    },
+    {
+        name: "Jivamukti Yoga Berlin-Kreuzberg",
+        address: "Dresdener Str. 11, 10999 Berlin, Germany",
+        latitude: 52.5006984,
+        longitude: 13.4177965,
+        googlePlaceId: "ChIJUUz9NbxRqEcRLiAA3UIJGd0",
+        styles_offered: ["Jivamukti"],
+        website: "https://www.threeboonsyoga.de",
+    },
+    {
+        name: "Lotos Yoga Loft",
+        address: "Scharnweberstraße 30, 10247 Berlin, Germany",
+        latitude: 52.5132720,
+        longitude: 13.4632777,
+        googlePlaceId: "PLACEHOLDER",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://yoga-lotos.de/",
+    },
+    {
+        name: "Yoga Now Berlin",
+        address: "Mehringdamm 61, 10961 Berlin, Germany",
+        latitude: 52.4908280,
+        longitude: 13.3872750,
+        googlePlaceId: "ChIJqTgwZgBPqEcREYXhM0ZT0gc",
+        styles_offered: ["Jivamukti", "Vinyasa"],
+        website: "https://yoganowberlin.de/",
+    },
+    {
+        name: "Mahalaya",
+        address: "Boxhagener Str. 77, 10245 Berlin, Germany",
+        latitude: 52.5079882,
+        longitude: 13.4692971,
+        googlePlaceId: "ChIJ6yQhpfZOqEcR-jJtDZfqy3Q",
+        styles_offered: ["Bikram", "Vinyasa"],
+        website: "https://www.mahalaya-yoga.de/",
+    },
+    {
+        name: "Bikram Yoga",
+        address: "Krausnickstraße 23, 10115 Berlin, Germany",
+        latitude: 52.5248354,
+        longitude: 13.3957345,
+        googlePlaceId: "ChIJW5xcuuFRqEcRI_Xz3DYB5AI",
+        styles_offered: ["Bikram"],
+        website: "https://www.bikram-berlin.de/",
+    },
+    {
+        name: "Yoga Hub Berlin - Friedrichshain",
+        address: "Thaerstraße 40, 10249 Berlin, Germany",
+        latitude: 52.5205600,
+        longitude: 13.4542100,
+        googlePlaceId: "ChIJ0z4lGzhPqEcR2RORwsKZJd8",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://www.yogahubberlin.com/",
+    },
+    {
+        name: "yogafürdich Berlin Friedrichshain",
+        address: "Frankfurter Allee 53 2. Hof, Loftgebäude, 2. Etage (Aufzug Taste 4, 10247 Berlin, Germany",
+        latitude: 52.5151700,
+        longitude: 13.4653900,
+        googlePlaceId: "ChIJYUl9G2BOqEcRHSzbkMtHTH4",
+        styles_offered: ["Vinyasa"],
+        website: "https://www.yfdberlin.com/",
+    },
+    {
+        name: "Lotos Yoga Berlin",
+        address: "Mainzer Str. 21, 10247 Berlin, Germany",
+        latitude: 52.5136349,
+        longitude: 13.4628353,
+        googlePlaceId: " ChIJpSRrb-dPqEcRoLSHOwyDUww",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://yoga-lotos.de/de/",
+    },
+    {
+        name: "Kalaa Yoga Berlin",
+        address: "Lychener Str. 47, 10437 Berlin, Germany",
+        latitude: 52.5444112,
+        longitude: 13.4177940,
+        googlePlaceId: "ChIJa72HgABSqEcR-WghuUpU0Gk",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://www.kalaa-yoga-berlin.de/",
+    },
+    {
+        name: "ŌHIA - Find Inner Peace. Yoga & Meditation Courses",
+        address: "Torstraße 103, 10119 Berlin, Germany",
+        latitude: 52.5300379,
+        longitude: 13.4037666,
+        googlePlaceId: "ChIJmf4SXBtRqEcRIDFsbjLSzlU",
+        styles_offered: ["Jivamukti", "Vinyasa"],
+        website: "https://ohiameditation.com/",
+    },
+    {
+        name: "yogibar - Yoga Studio",
+        address: "Boxhagener Str. 31, 10245 Berlin, Germany",
+        latitude: 52.5123085,
+        longitude: 13.4595194,
+        googlePlaceId: "ChIJ0WBLFF5OqEcRcZx3z29lzZ4",
+        styles_offered: ["Vinyasa"],
+        website: "https://www.yogibar.de/",
+    },
+    {
+        name: "Green Yoga Kreuzberg",
+        address: "Oranienstraße 163 Backyard, 3rd Floor, 10969 Berlin, Germany",
+        latitude: 52.5025213,
+        longitude: 13.4141055,
+        googlePlaceId: "ChIJS7KvKihPqEcRrxzmN3UMG88",
+        styles_offered: ["Vinaysa", "Hatha"],
+        website: "https://www.greenyoga.co/",
+    },
+    {
+        name: "YogaCircle Berlin Akademie",
+        address: "Schliemannstraße 22, 10437 Berlin, Germany",
+        latitude: 52.5445266,
+        longitude: 13.4208204,
+        googlePlaceId: "ChIJKf0LDv9NqEcRLS0Ku9XJeFo",
+        styles_offered: ["Vinyasa"],
+        website: "https://yogacircle-berlin.de/",
+    },
+    {
+        name: "Mindful Life Berlin",
+        address: "Gleimstraße 19, 10437 Berlin, Germany",
+        latitude: 52.5471400,
+        longitude: 13.4092701,
+        googlePlaceId: "ChIJ__-PiANSqEcRVW_8UIPrmgM",
+        styles_offered: ["Vinaysa", "Hatha"],
+        website: "https://mindfullife-berlin.com/",
+    },
+    {
+        name: "Yogibar- Prenzlauer Berg",
+        address: "Käthe-Niederkirchner-Straße 33 (Eckladen, 10407 Berlin, Germany",
+        latitude: 52.5312264,
+        longitude: 13.4308898,
+        googlePlaceId: "ChIJ3_6pbXBPqEcRzvnxVjGy5WE",
+        styles_offered: ["Vinyasa"],
+        website: "https://www.yogibar.de/",
+    },
+    {
+        name: "Element Yoga",
+        address: "Pfuelstraße 5, 10997 Berlin, Germany",
+        latitude: 52.5026972,
+        longitude: 13.4406356,
+        googlePlaceId: "ChIJj_wz8lFOqEcRXkPPBl9ASyA",
+        styles_offered: ["Vinyasa"],
+        website: "https://elementyoga.de/",
+    },
+    {
+        name: "Yogicescape - Yoga & Wellness Studio",
+        address: "Naugarder Str. 14, 10409 Berlin, Germany",
+        latitude: 52.5441421,
+        longitude: 13.4380236,
+        googlePlaceId: "ChIJL-fm94ZNqEcRtSbVNXvDXc4",
+        styles_offered: ["Vinaysa", "Hatha"],
+        website: "https://www.yogicescape.de/",
+    },
+    {
+        name: "Casa Flow Studios Prenzlauer Berg",
+        address: "Prenzlauer Allee 38, 10405 Berlin, Germany",
+        latitude: 52.5350171,
+        longitude: 13.4223028,
+        googlePlaceId: "ChIJmRjicY9PqEcR2bcqr1zG7Hw",
+        styles_offered: ["Jivamukti", "Vinyasa"],
+        website: "https://casaflow.de/",
+    },
+    {
+        name: "now. Classical Hatha Yoga",
+        address: "Diedenhofer Str. 3, 10405 Berlin, Germany",
+        latitude: 52.5345444,
+        longitude: 13.4175831,
+        googlePlaceId: "ChIJ__iLtANOqEcRLWJUsBqZU2A",
+        styles_offered: ["Hatha"],
+        website: "https://www.now-classicalhathayoga.de/",
+    },
+    {
+        name: "Green Yoga Prenzlauer Berg",
+        address: "Sredzkistraße 59, 10405 Berlin, Germany",
+        latitude: 52.5379976,
+        longitude: 13.4213859,
+        googlePlaceId: "ChIJLSNIbrdPqEcRVvydXCxVA1o",
+        styles_offered: ["Vinaysa", "Hatha"],
+        website: "https://www.greenyoga.co/",
+    },
+    {
+        name: "Yoga Hub Berlin - Prenzlauer Berg",
+        address: "Greifswalder Str. 8d, 10405 Berlin, Germany",
+        latitude: 52.5293630,
+        longitude: 13.4256070,
+        googlePlaceId: "ChIJhzwmrBpOqEcRKqYpRHPTlgw",
+        styles_offered: ["Vinyasa", "Hatha"],
+        website: "https://www.yogahubberlin.com/",
+    },
 
-const studio2 = new Studio({
-    name: "Ashtanga Studio Berlin",
-    address: "Jablonskistraße 24, 10405 Berlin, Germany",
-    latitude: 52.5381874510556,
-    longitude: 13.424802000215523,
-    googlePlaceId: "ChIJC5jF6AZOqEcRDqbFi2nBpUE",
-    styles_offered: ["Jivamukhti"],
-    website: "https://www.ashtangastudio.de/",
-});
+]
 
-studio1.save()
-    .then(studio => {
-        console.log("Yoga Hub added");
-    })
-    .catch(err => {
-        console.error(err);
-    });
+Promise.all(studios.map(studioData => {
+    const studio = new Studio(studioData);
+    return studio.save()
+        .then(studio => {
+            console.log(`${studio.name} added`);
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}))
 
-studio2.save()
-    .then(studio => {
-        console.log("Ashtange Studio added");
-    })
-    .catch(err => {
-        console.error(err);
-    })
-    .finally(() => {
-        mongoose.connection.close();
-    });
+    .then(() => mongoose.connection.close())
+.catch(err => console.error(err));

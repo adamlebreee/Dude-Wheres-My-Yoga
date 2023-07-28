@@ -1,8 +1,6 @@
 import React from "react";
 import MapView, { Marker } from "react-native-maps";
-import { Dimensions } from "react-native";
 
-const { width, height } = Dimensions.get('window');
 
 const Map = ({ studios, setSelectedStudio }) => {
     return (
