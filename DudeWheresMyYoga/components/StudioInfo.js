@@ -1,15 +1,37 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { StyleSheet, Linking, TouchableOpacity, Text } from "react-native";
 
 const StudioInfo = ({ studio }) => {
-    console.log(studio)
+    if (!studio) {
+        return null;
+    }
+
     return (
-        <View> 
-            <Text>{studio.name}</Text>
-            <Text>{studio.address}</Text>
-            <Text>{studio.website}</Text>
-        </View>
+        <>
+            <Text style={styles.title}>{studio.name}</Text>
+            <Text style={styles.info}>{studio.address}</Text>
+            <TouchableOpacity onPress={() => Linking.openURL(studio.website)}>
+                <Text style={styles.link}>{studio.website}</Text>
+            </TouchableOpacity>
+        </>
     )
 }
+
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    info: {
+        fontSize: 16,
+        textAlign: 'center',
+    },
+    link: {
+        fontSize: 16,
+        textAlign: 'center',
+        color: 'blue'
+    }
+})
 
 export default StudioInfo;

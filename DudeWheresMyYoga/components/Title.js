@@ -6,12 +6,13 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         resizeMode: 'contain',
+        marginLeft: 75
     },
 });
 
 const Title = () => {
     return (
-            <View style={{ alignItems: 'center'}}>
+            <View style={{  alignItems: 'center'}}>
                 <Image
                     style={styles.logo}
                 source={require('../assets/logo.png')}
