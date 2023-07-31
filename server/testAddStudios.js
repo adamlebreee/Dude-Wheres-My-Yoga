@@ -299,7 +299,42 @@ const studios = [
         styles_offered: ["Vinyasa", "Hatha"],
         website: "https://www.yogahubberlin.com/",
     },
-
+    { 
+        name: "Brauhaus GEORGBRAEU",
+        address: "Spreeufer 4, 10178 Berlin",
+        latitude: 52.51750050802494, 
+        longitude: 13.405981062336235,
+        googlePlaceId: "ChIJg600riBOqEcRzc4UWMI-Ikg",
+        styles_offered: ["Beer"],
+        website: "https://www.georgbraeu.de/"
+    },
+{
+    name: "Brauerei Lemke Berlin",
+    address: "Rochstraße 6 a, 10178 Berlin",
+    latitude: 52.523758328007645,
+    longitude: 13.407066450839618,
+    googlePlaceId: "ChIJEdIhxZ5RqEcRY49WEgbyYJQ",
+        styles_offered: ["Beer"],
+    website: "https://www.lemke.berlin/"
+    },
+    {
+        name: "BRLO Brwhouse",
+        address: "Schöneberger Str. 16, 10963 Berlin",
+        latitude: 52.50147671072158,
+        longitude: 13.374214981521972,
+        googlePlaceId: "ChIJU1qJezNQqEcRC6S-QH3btN4",
+        styles_offered: ["Beer"],
+        website: "https://www.brlo.de/gastronomien/brlo-brwhouse"
+    },
+    {
+        name: "Bräugier BrewPub",
+        address: "Stubbenkammerstraße 6, 10437 Berlin",
+        latitude: 52.54294156935215, 
+        longitude: 13.424910280025035,
+        googlePlaceId: "ChIJ-QdxNABSqEcR1dEWW3epKz0",
+        styles_offered: ["Beer"],
+        website: "https://www.braeugier.de/"
+    },
 ]
 
 Promise.all(studios.map(studioData => {
