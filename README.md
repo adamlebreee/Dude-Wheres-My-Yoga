@@ -43,15 +43,15 @@ The backend is built with Express.js and uses a MongoDB database for storing dat
 
     b. Install dependencies using npm or yarn:
 
-    ```
-    npm install
-    ```
+
+        npm install
+ 
 
     c. Start the Expo dev server:
 
-    ```
-    expo start
-    ```
+
+        expo start
+
 
 **2. Backend:**
 
@@ -59,23 +59,23 @@ The backend is built with Express.js and uses a MongoDB database for storing dat
 
     b. Install dependencies using npm or yarn:
 
-    ```
-    npm install
-    ```
+
+        npm install
+
 
     c. Start the Express server:
 
-    ```
-    node server.js
-    ```
+
+        node server.js
+
 
 **3. Test Data:**
 
     a. Run the `testAddStudios.js` script to add the test studios to the database:
 
-    ```
-    node testAddStudios.js
-    ```
+ 
+        node testAddStudios.js
+
 
 **Note:** Make sure to replace `192.168.178.31` in the fetch URL in `App.js` with the IP of the machine where the backend server is running.
 
