@@ -59,10 +59,12 @@ The backend is built with Express.js and uses a MongoDB database for storing dat
 
     b. Install dependencies using npm or yarn:
 
-
+```
+{
         npm install
+}
 
-
+```
     c. Start the Express server:
 
 
