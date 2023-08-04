@@ -6,7 +6,10 @@
       }
     },
     "android": {
-      "package": "com.adamlebreee.dudewheresmyyoga"
+      "package": "com.adamlebreee.dudewheresmyyoga",
+      "compileSdkVersion": 31,
+      "targetSdkVersion": 31,
+      "buildToolsVersion": "31.0.0"
     },
     "runtimeVersion": {
       "policy": "appVersion"
