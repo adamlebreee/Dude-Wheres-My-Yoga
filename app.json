@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "923120c0-0c7d-4c03-85b3-49660587253d"
+      }
+    },
+    "android": {
+      "package": "com.adamlebreee.dudewheresmyyoga"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/923120c0-0c7d-4c03-85b3-49660587253d"
+    },
+    "ios": {}
+  }
+}
