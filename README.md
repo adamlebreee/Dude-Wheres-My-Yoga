@@ -1,4 +1,4 @@
-# Dude-Wheres-My-Yoga
+# Flow-Finder
 
 This is a mobile application developed using React Native, Express.js and MongoDB. The app allows users to select a style of Yoga and then shows all studios on a map that offer classes in the selected style.
 
