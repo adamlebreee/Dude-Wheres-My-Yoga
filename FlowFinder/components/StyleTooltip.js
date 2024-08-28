@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Linking } from "react-native";
 import { useState } from "react";
-import Popover from "react-native-popover-view/dist/Popover";
+import Popover from "react-native-popover-view";
 import { useRef } from "react";
 
 const styleInfo = {

@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.adamlebreee.dudewheresmyyoga">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.adamlebreee.flowfinder">
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -26,8 +26,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="com.adamlebreee.dudewheresmyyoga"/>
-        <data android:scheme="exp+dude-wheres-my-yoga"/>
+        <data android:scheme="com.adamlebreee.flowfinder"/>
+        <data android:scheme="exp+flow-finder"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

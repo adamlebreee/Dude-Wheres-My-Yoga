@@ -15,7 +15,7 @@ const Title = () => {
             <View style={{  alignItems: 'center'}}>
                 <Image
                     style={styles.logo}
-                source={require('../assets/Flow Finder.webm')}
+                source={require('../assets/Flow-Finder.webp')}
             />
         </View>
     );

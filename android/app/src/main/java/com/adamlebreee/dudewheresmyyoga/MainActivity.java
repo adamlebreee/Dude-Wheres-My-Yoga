@@ -1,4 +1,4 @@
-package com.adamlebreee.dudewheresmyyoga;
+package com.adamlebreee.flowfinder;
 
 import android.os.Build;
 import android.os.Bundle;
