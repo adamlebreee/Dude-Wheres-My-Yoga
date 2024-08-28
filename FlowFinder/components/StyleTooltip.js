@@ -11,7 +11,6 @@ const styleInfo = {
     Bikram: 'Bikram Yoga, performed in a heated room, promotes extensive sweating which aids in detoxification, and the increased warmth allows for deeper stretching and reduced risk of injury. The fixed sequence of 26 postures and two breathing exercises enhances flexibility, strength, and balance while also improving cardiovascular health, concentration, and stress management.',
     Aerial: 'Aerial Yoga combines traditional yoga poses with elements of aerial arts, providing a full- body workout that improves strength, flexibility, and balance, while allowing for deeper stretches and alignment corrections with the support of the hammock.The unique nature of suspended movements in this practice can also enhance mental focus, reduce stress, improve mood, and offer the opportunity for inversions, which are beneficial for spinal health and circulation, without putting excessive pressure on the neck and spine.',
     Jivamukti: 'Jivamukti Yoga, incorporating physical postures, meditation, and ethical principles, offers a holistic approach to wellness, promoting strength, flexibility, and balance, while fostering spiritual growth and a sense of unity with all beings. This form of yoga encourages a deeper understanding of the self and ones relationship with the environment, enhancing mental clarity, reducing stress, and cultivating compassion and mindfulness in daily life.',
-    Beer: 'https://youtu.be/dQw4w9WgXcQ',
 };
 
 const styles = StyleSheet.create({
